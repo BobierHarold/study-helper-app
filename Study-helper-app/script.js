@@ -1,3 +1,10 @@
+// Register Service Worker
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js")
+    .then(() => console.log("Service Worker registered"))
+    .catch(err => console.error("Service Worker failed:", err));
+}
+
 // Flashcards
 let flashcards = JSON.parse(localStorage.getItem("flashcards")) || [];
 
@@ -41,7 +48,8 @@ let notes = JSON.parse(localStorage.getItem("notes")) || [];
 function saveNote() {
 const note = document.getElementById("noteInput").value;
 notes.push(note);
-lodisplayNotes();
+localStorage.setItem("notes", JSON.stringify(notes));
+displayNotes();
 }
 
 function displayNotes() {
