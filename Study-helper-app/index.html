@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Study Helper App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Study Helper App</h1>
+
+  <!-- Flashcards -->
+  <section>
+    <h2>Flashcards</h2>
+    <input type="text" id="term" placeholder="Enter term">
+    <input type="text" id="definition" placeholder="Enter definition">
+    <button onclick="addFlashcard()">Add Flashcard</button>
+    <button onclick="showFlashcard()">Show Random Card</button>
+    <div id="flashcard"></div>
+</section>
+
+<!-- Timer -->
+<section>
+    <h2>Pomodoro Timer</h2>
+    <button onclick="startTimer(25)">Start 25 min Focus</button>
+    <button onclick="startTimer(5)">Start 5 min Break</button>
+    <div id="timer"></div>
+</section>
+
+<!-- Notes -->
+<section>
+    <h2>Notes</h2>
+    <textarea id="noteInput" placeholder="Write your notes here..."></textarea>
+    <button onclick="saveNote()">Save Note</button>
+    <div id="notes"></div>
+</section>
+
+<!-- Daily Quote -->
+<section>
+    <h2>Daily Motivation</h2>
+    <button onclick="getQuote()">Get Quote</button>
+    <div id="quote"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
